@@ -1,0 +1,194 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	scroll-behavior:smooth;
+}
+
+body {
+	font-family: "Garamond", serif;
+	font-size: large;
+	/* background-color: bisque; */
+	background-image: url(asset/img/bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+h1:hover{
+	color: #bbea65;
+}
+
+header {
+	background-color: #2a411a;
+	background: linear-gradient(to right,#2a411a, #75835ae4 );
+	color: #f2edb9;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	margin-left: 40px;
+}
+
+nav ul li {
+	margin-right: 20px;
+}
+
+nav ul li a {
+	color: #f2edb9;
+	text-decoration: none;
+	font-family: "Garamond", serif;
+	font-size: larger;
+}
+
+
+main {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 10px;
+	margin-left: 10px;
+}
+
+article {
+	width: 90%;
+	margin-bottom: 40px;
+	border: 3px double #265610;
+	padding: 20px;
+	float: left;
+	margin-right: 20px;
+	text-align: center;
+	}
+
+img {
+	display: block;
+    margin: 0 auto;
+	max-width: 30%;
+	height: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+  }
+
+  article img{
+	border-radius: 10%;
+	width: 60%;
+  }
+
+.zoom {
+	transform: scale(3.3);
+  	box-shadow: 0 0 50px #000;
+}
+/*menentukan gaya untuk elemen gambar yang memiliki kelas zoom. saya menggunakan transformasi skala (3.3) untuk memperbesar gambar*/
+
+div {
+	flex: 1;
+}
+
+aside {
+	width: 30%;
+	height: fit-content;
+	display: flex;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	padding: 20px;
+	border: 3px dotted #265610;
+	float: right;
+}
+
+table {
+	width: 95%;
+	max-width: 95%;
+	border: 3px dotted #265610;
+	align-content: center;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+
+th, td {
+	flex-direction: column;
+	display: flex;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+	header nav ul {
+		flex-wrap: wrap;
+		row-gap: .5rem;
+	}
+	
+	header h1 {
+		font-size: medium;
+	}
+
+	nav ul {
+		font-size: smaller;
+	}
+
+	aside {
+		margin-right: 40px;
+		width: auto;
+		
+	}
+
+	main {
+		flex-direction: column;
+		gap: 2rem;
+		margin-left: 40px;
+
+	}
+
+	main aside{
+		order: -1;
+	}
+
+	footer {
+		text-align: center;
+	}
+
+	.zoom {
+		transform: scale(2.2);
+		box-shadow: 0 0 50px #000;
+	}
+    /* sama seperti kelas zoom di atas namun media query ini digunakan saat ukuran layar diperkecil */
+  
+
+	#clock {
+		font-size: 30px;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	}
+
+#clock {
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+}
+
+footer {
+	background-color: #75835ae4;
+	color: bisque;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+  	bottom: 0;
+ 	width: 100%;
+	
+}
